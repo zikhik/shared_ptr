@@ -7,6 +7,11 @@ SCENARIO("ctor1", "[ctor1]"){
   REQUIRE(!sp.get());
 }
 
+SCENARIO("reset", "[reset]"){
+  shared_ptr<int> sp(new int(7));
+  sp.reset();
+}
+
 SCENARIO("ctor2", "[ctor2]"){
   shared_ptr<int> sp(new int(7));
   REQUIRE(*sp==7);
